@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>This one is for my Varchhu</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			
+			Hey Girl,
+
+Do you remember the day we first chatted?
+<br>May 30th at 10:47 PM. <br/>
+From that moment, a spark was lit.
+<br>We just started talking a couple of days ago,
+but something about you already feels special. <br/>
+
+Your smile, your vibe, the way you speak...
+Even the little things—somehow, they’ve stayed on my mind.
+<br>There’s a calmness in you, even with the pain you carry,
+and I respect that more than words can say. <br/>
+
+<br>I know your heart’s been through a lot,
+and I don’t expect you to open up right away.<br/>
+But I just wanted you to know—
+there’s someone here who sees you, who genuinely cares.
+
+<br>No pressure, no rush.
+Just a hope... <br/>
+that one day, we could write a new story together—peaceful, real, and full of love.
+
+<br>Till then, I’ll be here.
+With honesty, with patience, and with a heart that already likes you more than I expected <br/>
+			<br>
+			<span id="heartspan">
+		
+			</span>
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					FOREVER
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					I LOVE YOU SO MUCH<br/>
+					<div class="signature">- THIRU</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2025, 4, 30); // Year: 2025, Month: May (4), Day: 30
+together.setHours(22);            // 10 PM in 24-hour format
+together.setMinutes(47);          // 47 minutes
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+</body>
+</html>
